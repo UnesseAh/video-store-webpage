@@ -1,0 +1,162 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: #1b2127;
+  color: white;
+  font-family: "Rubik";
+}
+
+/* HEADER SECTION */
+
+header {
+  height: 10vh;
+  background-color: #14181c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+
+header img {
+  width: 80px;
+  display: flex;
+  margin-right: 50px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  align-items: center;
+}
+
+header li a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* NAV LINKS */
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+  margin: 0 2vw;
+  margin-top: 20px;
+}
+
+.nav-links li {
+  text-transform: uppercase;
+}
+
+/* FIRST SECTION */
+
+.first-section {
+  margin: 0 2vw;
+}
+
+.first-section h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.first-section p {
+  width: 40vw;
+}
+
+/* MOVIES SECTION */
+
+.movies-sec {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 2vw;
+}
+
+.movies-sec section {
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.movies-sec section:hover {
+  border: 2px solid greenyellow;
+  transform: scale(1.03);
+}
+
+.movies-sec section {
+  padding: 10px;
+}
+
+.movies-sec h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.movies-sec span {
+  display: block;
+}
+
+.movies-sec span {
+  margin-bottom: 5px;
+}
+
+.movies-sec .saving {
+  color: yellowgreen;
+}
+
+@media (max-width: 600px) {
+  /* HEADER SECTION */
+  header {
+    height: 13vh;
+    display: block;
+  }
+
+  header img {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  header ul {
+    width: 73vw;
+    margin: 10px auto;
+  }
+
+  header li a {
+    font-size: 0.7rem;
+  }
+
+  .nav-links ul {
+    width: 70vw;
+    margin-top: 10px;
+  }
+
+  .first-section p {
+    width: 80vw;
+  }
+
+  .movies-sec {
+    justify-content: space-around;
+    margin: 20px 5vw;
+  }
+
+  .movies-sec section {
+    margin-bottom: 10px;
+  }
+}
