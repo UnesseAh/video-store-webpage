@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap"); */
-
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
 * {
@@ -27,9 +25,9 @@ header {
 }
 
 header img {
-  width: 80px;
+  width: 5rem;
   display: flex;
-  margin-right: 50px;
+  margin-right: 3.125rem;
 }
 
 header ul {
@@ -40,13 +38,24 @@ header ul {
 }
 
 header li a {
+  position: relative;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
 }
+header li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  bottom: -7px;
+  transition: 0.3s;
+}
 
-header a:hover {
-  text-decoration: underline;
+header li a:hover::before {
+  width: 100%;
 }
 
 /* NAV LINKS */
@@ -54,9 +63,9 @@ header a:hover {
 .nav-links ul {
   display: flex;
   justify-content: space-between;
-  width: 25vw;
+  width: 10vw;
   margin: 0 2vw;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .nav-links li {
@@ -84,27 +93,27 @@ header a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px 2vw;
+  margin: 1.25rem 2vw;
 }
 
 .movies-sec section {
   border: 2px solid white;
   border-radius: 0.5rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .movies-sec section:hover {
   border: 2px solid greenyellow;
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .movies-sec section {
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .movies-sec h2 {
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -113,22 +122,33 @@ header a:hover {
 }
 
 .movies-sec span {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 .movies-sec .saving {
   color: yellowgreen;
 }
 
-@media (max-width: 600px) {
-  /* HEADER SECTION */
+.filmsToBuy {
+  background-color: #14181c;
+}
+
+
+.offers {
+  background-color: #14181c;
+}
+
+/* MEDIA QUERIES*/
+@media (max-width: 480px) {
+
   header {
-    height: 13vh;
+    height: 17vh;
     display: block;
+    padding-top: 0.625rem;
   }
 
   header img {
-    width: 100px;
+    width: 90px;
     display: block;
     margin: 10px auto;
   }
@@ -143,7 +163,7 @@ header a:hover {
   }
 
   .nav-links ul {
-    width: 70vw;
+    width: 40vw;
     margin-top: 10px;
   }
 
@@ -158,5 +178,11 @@ header a:hover {
 
   .movies-sec section {
     margin-bottom: 10px;
+  }
+}
+
+@media print {
+  header ul {
+    display: none;
   }
 }
